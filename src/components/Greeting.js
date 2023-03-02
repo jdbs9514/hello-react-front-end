@@ -1,11 +1,14 @@
 import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
-import { fetchMessage } from '../redux/actions';
+import {  useSelector, useDispatch} from 'react-redux'
+import { fetchMessage } from '../reducers/greetingReducer';
 
-const Greeting = ({ greeting, fetchMessage }) => {
+const Greeting = () => {
+  const greeting = useSelector((state) => state.greeting);
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    fetchMessage();
-  });
+    dispatch(fetchMessage());
+  }, [dispatch]);
 
   return (
     <div>
@@ -14,8 +17,5 @@ const Greeting = ({ greeting, fetchMessage }) => {
   );
 };
 
-const mapStateToProps = state => ({
-  greeting: state.greeting
-});
 
-export default connect(mapStateToProps, { fetchMessage })(Greeting);
+export default Greeting;
