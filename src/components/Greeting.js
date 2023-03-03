@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import {  useSelector, useDispatch} from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux';
 import { fetchMessage } from '../reducers/greetingReducer';
 
 const Greeting = () => {
@@ -16,6 +16,5 @@ const Greeting = () => {
     </div>
   );
 };
-
 
 export default Greeting;
