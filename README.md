@@ -98,6 +98,8 @@ After you're finished please remove all the comments and instructions!
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
+PR back-end : https://github.com/jdbs9514/hello-rails-back-end/pull/1
+
 
 To get a local copy up and running, follow these steps.
 
